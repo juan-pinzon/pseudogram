@@ -31,7 +31,7 @@ class App extends Component {
 
   handleLogout() {
     firebase.auth().signOut()
-      .then(response => console.log(`ha salido`))
+      .then(response => console.log(`Ha salido`))
       .catch(error => console.error(`Error ${error.code}: ${error.message}`));
   }
 
