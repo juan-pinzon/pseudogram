@@ -1,0 +1,74 @@
+Para crear un repositorio.
+git init [nombre de carpeta (opcional, sirve para crear la carpeta)]
+Para clonar un repositorio.
+git clone [url del repositorio (HTTPS/SSH)]
+Para ver el estado de los archivos.
+git status
+Para agregar un archivo que está en el working directory al stage.
+git add [nombre del archivo con extensión]
+Para seleccionar todos los archivos del working directory y pasarlos al stage.
+git add -A o git add .
+Para deshacer los cambios de un archivo que está en el working directory
+git checkout -- [nombre del archivo]
+Para borrar un archivo por completo.
+git rm -f [nombre del archivo]
+Para devolver un archivo o todos del stage al working directory.
+git rm --cached
+Para hacer un commit.
+git commit -m [un comentario (opcional), debe ir entre comillas]
+Para agregar al stage y hacer commit al mismo tiempo
+git commit -am [un comentario (opcional), debe ir entre comillas]
+Para agregar algo o modificar el comentario del último commit.
+git commit --amend -m [un comentario (opcional), debe ir entre comillas]
+Para el historial de los commits.
+git log
+Para salir del log.
+q
+Para ver el listado de ramas actual y ver en la que estoy posicionado.
+git branch
+Para crear una rama.
+git branch [nombre de la rama]
+Para cambiar de rama.
+git checkout [nombre de la rama]
+Para crear una rama y cambiar a ella inmediatamente.
+git checkout -b [nombre de la rama]
+Para borrar una rama.
+git branch -D [nombre de la rama]
+Para renombrar una rama
+git branch -m [nombre old] [nombre new]
+Para mezclar/unir dos ramas.
+git merge [nombre de la rama que se va a absorber]
+Para unir mi repositorio local con un repositorio remoto(mismo nombre), debe estar en la rama ‘master’.
+git remote add origin [url del repositorio remoto, puede ser ‘https’ o ‘ssh’]
+Para bajar los cambios del repositorio remoto.
+git pull origin [nombre de la rama]
+Para ver si estamos conectados con un repositorio remoto.
+git remote -v
+Para eliminar/desconectar el repositorio remoto con el local.
+git remote remove [ruta del repositorio (SSH/HTTPS)
+Para subir los cambios de la rama local al repositorio remoto.
+git push origin [nombre de la rama]
+Para colocar etiquetas a los commits.
+git tag -a [nombre de la etiqueta] -m [mensaje entre comillas]
+Para listar las etiquetas.
+git tag -l
+Para eliminar etiqueta.
+git tag -d [nombre de la etiqueta]
+Para renombrar etiqueta.
+git tag -f -a [nombre de la etiqueta] -m [mensaje entre comillas]
+Para resetear un commit al stage, se debe aplicar al anterior.
+git reset --soft [SHA1]
+Para resetear un commit al working directory, se debe aplicar al anterior.
+git reset --mixed [SHA1]
+Para borrar los commits en adelante con respecto a un idCommit, también lo que esté en stage.
+git reset --hard [SHA1]
+Para hacer un guardado rápido provisional mientras se hace algún otro comando, por ejemplo, cambiar de rama para corregir algo de improvisto.
+git stash
+Para traer los archivos que se guardaron provisionalmente al staging area.
+git stash apply [stash@{number}(Para aplicar uno diferente al último)]
+Para ver el listado de los cambios guardados provisionalmente que no se han aplicado.
+git stash list
+Para borrar un stash que esté en el listado
+git stash drop stash@{number}
+Para mover un cambio de una rama a otra
+git cherry-pick [SHA1]
